@@ -1,7 +1,9 @@
 <?php
-$arr = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta"];
-foreach($arr as $item){
 
-    echo "Dia:" . $item . "<br>";
+$arr = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sabado"];
+
+foreach($semanas as $dias){
+    echo $dias, "<br>";
 }
+
 ?>
