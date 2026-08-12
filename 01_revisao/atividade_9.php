@@ -1,35 +1,15 @@
 <?php
-
-$numero1 = 20;
-$numero2 = 5;
-$operacao = "/";
-
-switch ($operacao) {
-
-    case "+":
-        echo $numero1 + $numero2;
-        break;
-
-    case "-":
-        echo $numero1 - $numero2;
-        break;
-
-    case "*":
-        echo $numero1 * $numero2;
-        break;
-
-    case "/":
-        if ($numero2 == 0) {
-            echo "Erro: divisão por zero.";
-        } else {
-            echo $numero1 / $numero2;
-        }
-        break;
-
-    default:
-        echo "Operação inválida.";
+$idade_pessoa = 16;
+$acompanhada = true;
+if ($idade_pessoa >= 18){
+    echo "Pode entrar sozinha!😁";
 }
-
+elseif ($idade_pessoa >= 14
+    && $idade_pessoa <= 17
+    && $acompanhada == true){
+    echo "Entrada liberada com sucesso!!";
+}
+else{
+    echo "Menores de 14 não podem entrar, mesmo acompanhada!"
+}
 ?>
-
-
