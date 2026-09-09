@@ -24,9 +24,3 @@ function calcularPedido($nomeProduto, $precoUnitario, $quantidade, $percentualDe
 }
 
 ?>
-
-    
-    
-
-    
-    

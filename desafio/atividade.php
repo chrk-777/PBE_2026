@@ -11,4 +11,7 @@ echo "Valor do Desconto: R$ " . number_format($resultado['valor_desconto'], 2, '
 echo "Valor do Imposto: R$ " . number_format($resultado['valor_imposto'], 2, ',', '.') . "<br>";
 echo "Total Final: R$ " . number_format($resultado['total_final'], 2, ',', '.') . "<br>";
 
+$totalcomfrete = calculofrete($resultado['totalfinal']);
+echo "total com Frete". $totalComFrete;
+
 ?>
