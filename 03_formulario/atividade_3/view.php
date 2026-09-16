@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Calculadora Simples</title>
+    <title>Calculao do Salário</title>
 </head>
 <body>
 

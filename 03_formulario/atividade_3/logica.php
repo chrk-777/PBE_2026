@@ -1,7 +1,7 @@
 <?php
 
-$num1 = $_POST['primeironumero'];
-$num2 = $_POST['segundonumero'];
+$num1 = $_POST['primeiro numero'];
+$num2 = $_POST['segundo numero'];
 $operacao = $_POST ['operacao'];
 
 if ($operacao == "+"){
