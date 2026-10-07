@@ -6,17 +6,17 @@
 </head>
 <body>
 
-<h1>Relatório da Compra</h1>
+    <h1>Relatório da Compra</h1>
 
-<p>Nome do cliente: <?php echo $nome; ?></p>
+    <p>Nome do cliente: <?php echo $nome; ?></p>
 
-<p>Filme: <?php echo $filme; ?></p>
+    <p>Filme: <?php echo $filme; ?></p>
 
-<p>Quantidade de ingressos: <?php echo $quantidade; ?></p>
+    <p>Quantidade de ingressos: <?php echo $quantidade; ?></p>
 
-<p>Tipo de ingresso: <?php echo $tipo; ?></p>
+    <p>Tipo de ingresso: <?php echo $tipo; ?></p>
 
-<p>Valor total: R$ <?php echo number_format($valorTotal, 2, ",", "."); ?></p>
+    s<p>Valor total: R$ <?php echo number_format($valorTotal, 2, ",", "."); ?></p>
 
 <?php
 
