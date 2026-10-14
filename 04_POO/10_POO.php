@@ -1,70 +1,57 @@
-
 <?php
+    echo"<b>CARRO</b>";
+    echo"<br><br>";
 
 class Carro {
 
-    private $modelo;
-    private $consumo; 
-    private $tanque; 
+    private $Modelo;
+    private $Consumo;
+    private $Tanque;
 
-    public function __construct($modelo, $consumo = 10, $tanqueInicial = 0) {
-        $this->modelo = $modelo;
-        $this->consumo = $consumo;
-        $this->tanque = $tanqueInicial;
+    function __construct($Modelo, $Consumo = 10, $TanqueInicial = 0) {
+        $this->Modelo = $Modelo;
+        $this->Consumo = $Consumo;
+        $this->Tanque = $TanqueInicial;
     }
 
-    public function abastecer($litros) {
-        if ($litros > 0) {
-            $this->tanque += $litros;
-            echo "Abastecimento realizado com sucesso! Adicionados {$litros} litro(s) ao '{$this->modelo}'.<br>";
+    function abastecer($Litros) {
+
+        if ($Litros > 0) {
+            $this->Tanque = $this->Tanque + $Litros;
+
+            echo "Abastecidos $Litros litro(s) no $this->Modelo.<br>";
         } else {
-            echo "Erro: A quantidade para abastecer deve ser maior que zero.<br>";
+            echo "Erro: quantidade inválida.<br>";
         }
     }
 
-    public function dirigir($km) {
+    function dirigir($Km) {
 
-        $combustivelNecessario = $km / $this->consumo;
+        $Combustivel = $Km / $this->Consumo;
 
-        if ($combustivelNecessario <= $this->tanque) {
-            $this->tanque -= $combustivelNecessario;
-            echo "Viagem realizada! O '{$this->modelo}' percorreu {$km} km e consumiu " . number_format($combustivelNecessario, 2, ',', '.') . " litros.<br>";
+        if ($Combustivel <= $this->Tanque) {
+
+            $this->Tanque = $this->Tanque - $Combustivel;
+
+            echo "O carro $this->Modelo percorreu $Km km e consumiu $Combustivel litros.<br>";
+
         } else {
-            echo "Erro: Combustível insuficiente para percorrer {$km} km com o '{$this->modelo}'. Tanque atual: " . number_format($this->tanque, 2, ',', '.') . "L.<br>";
+
+            echo "Não há combustível suficiente para percorrer $Km km.<br>";
         }
     }
 
-    public function exibirInfo() {
-        echo "Modelo: {$this->modelo} | Consumo: {$this->consumo} km/L | Tanque: " . number_format($this->tanque, 2, ',', '.') . " L<br>";
+    function exibirInfo() {
+        echo "Modelo: $this->Modelo | Consumo: $this->Consumo km/L | Tanque: $this->Tanque L";
+        echo "<br>";
     }
 }
 
-// --- Teste ---
+$carro = new Carro("Honda Civic", 12, 20);
 
-// Criação de carro
-$carro1 = new Carro("Sedan Luxo", 12, 5);
-$carro1->exibirInfo();
-
-// Abastecimento
-$carro1->abastecer(30);
-$carro1->exibirInfo();
-
-// Dirigindo 
-$carro1->dirigir(120);
-$carro1->exibirInfo();
-
-// Distancia que a gasolina dá
-$carro1->dirigir(1000);
-
-echo "<hr>";
-
-// Criação de um carro
-$carro2 = new Carro("Hatch Popular");
-$carro2->exibirInfo();
-
-// Abastecendo e depois dirigindo o outro carro
-$carro2->abastecer(20);
-$carro2->dirigir(150);
-$carro2->exibirInfo();
+$carro->exibirInfo();
+$carro->dirigir(60);
+$carro->abastecer(10);
+$carro->exibirInfo();
 
 ?>
