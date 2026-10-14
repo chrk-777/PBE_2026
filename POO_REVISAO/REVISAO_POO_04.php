@@ -56,3 +56,4 @@ echo "<h2>Ficha do Paciente</h2>";
 $paciente1->exibirFicha();
 
 ?>
+
